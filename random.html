@@ -23,8 +23,42 @@
 </nav>
 
 <main>
-    <div class="container">
-
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="border">
+                    <div class="p-3 bg-secondary text-white text-uppercase text-center">
+                        Генератор случайных чисел
+                    </div>
+                    <form class="p-3">
+                        <div class="form-group row">
+                            <label for="inputMin" class="col-sm-2 col-form-label">Min:</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control form-control-lg" id="inputMin">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputNax" class="col-sm-2 col-form-label">Max:</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control form-control-lg" id="inputMax">
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a role="button" id="generateRandNum" class="btn btn-lg btn-success" onclick="generateRandNum()">
+                                Сгенерировать
+                            </a>
+                        </div>
+                    </form>
+                    <div class="bg-light">
+                        <p class="p-4 h5">
+                            Результат: <mark id="result" class="h4">0</mark>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
     </div>
 </main>
 
