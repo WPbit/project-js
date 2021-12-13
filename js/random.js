@@ -4,7 +4,7 @@ function generateRandNum()
     let max = +document.querySelector('#inputMax').value;
 
     let randNum = Math.round(Math.random() * max);
-    let result = randNum < max ? randNum : randNum + min;
+    let result = randNum > min ? randNum : randNum + min;
 
     document.querySelector('#result').innerText = result;
 }
