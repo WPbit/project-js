@@ -1,0 +1,22 @@
+/*ICONS*/
+.icons-rounded-circle-grey {
+    width: 48px;
+    height: 48px;
+    background-color: #e9e9e9;
+    border: 1px solid whitesmoke;
+}
+.icons-rounded-circle-grey:hover {
+    background-color: #dddddd;
+}
+.icons-rounded-circle-green {
+    width: 48px;
+    height: 48px;
+    background-color: #c0ecc7;
+    border: 1px solid whitesmoke;
+}
+.icons-rounded-circle-green:hover {
+    background-color: #afdbb6;
+}
+.bg-lightblue {
+    background-color: #f2e1e4;
+}
