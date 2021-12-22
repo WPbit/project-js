@@ -5,13 +5,16 @@ let dot = false;
 function allInputs(symbol)
 {
     if (inputDisplay.textContent.length == 1 && inputDisplay.textContent == 0) {
+
         if (!isNaN(+symbol)) {
             inputDisplay.textContent = symbol;
         } else if (symbol == '.') {
             inputDisplay.textContent = 0 + symbol;
             dot = true;
         }
+
     } else {
+
         if (!isNaN(+inputDisplay.textContent[inputDisplay.textContent.length - 1]) || !isNaN(+symbol)) {
 
             (dot === true && symbol === '.') ? '' : inputDisplay.append(symbol);
@@ -34,9 +37,11 @@ function allInputs(symbol)
             }
 
         } else if (symbol !== '.') {
+
             inputDisplay.textContent = inputDisplay.textContent.slice(0, -1);
             inputDisplay.append(symbol);
             dot = false;
+
         }
     }
 }
