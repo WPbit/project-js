@@ -15,7 +15,7 @@ function allInputs(symbol)
 
     } else {
 
-        if (!isNaN(+inputDisplay.textContent[inputDisplay.textContent.length - 1]) || !isNaN(+symbol)) {
+        if (!isNaN(inputDisplay.textContent[inputDisplay.textContent.length - 1]) || !isNaN(symbol)) {
 
             (dot === true && symbol === '.') ? '' : inputDisplay.append(symbol);
 
@@ -54,10 +54,19 @@ function allClear()
 
 function calc()
 {
-    if (!isNaN(+inputDisplay.textContent[inputDisplay.textContent.length - 1])) {
-        inputDisplay.textContent = eval(inputDisplay.textContent);
+    let result = 0;
+
+    if (!isNaN(inputDisplay.textContent[inputDisplay.textContent.length - 1])) {
+        result = eval(inputDisplay.textContent);
     } else {
         inputDisplay.textContent = inputDisplay.textContent.slice(0, -1);
-        inputDisplay.textContent = eval(inputDisplay.textContent);
+        result = eval(inputDisplay.textContent);
+    }
+
+    if (result === Infinity) {
+        inputDisplay.textContent = 0;
+        alert('На 0 делить нельзя');
+    } else {
+        inputDisplay.textContent = result;
     }
 }
