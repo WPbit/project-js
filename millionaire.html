@@ -28,28 +28,51 @@
                             <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
                         </svg>
                     </a>
+                    <br>
+                    <div id="countTime" class="mt-5 display-4"></div>
+                    <div id="infoBlock" class="mt-5 h5"></div>
                 </div>
 
                 <div class="col-md-6 text-center">
                     <img src="images/fake_millionaire-2.png" class="img-fluid" alt="millionaire">
-                </div>
-
-                <div class="col-md-3 text-center text-white mt-4 h4">
-                    <a href="#" role="button" class="btn btn-outline-light rounded-circle pt-2 pb-2 pl-1 pr-1 mr-3" onclick="help5050()">
+                    <br>
+                    <a href="#" role="button" id="help5050" class="btn btn-outline-light rounded-circle pt-2 pb-2 pl-1 pr-1 mr-3" onclick="help5050()">
                         <b>50 : 50</b>
                     </a>
-                    <a href="#" role="button" class="btn btn-outline-light rounded-circle pl-3 pr-3 mr-3" onclick="helpCall()">
+                    <a href="#" role="button" id="helpCall" class="btn btn-outline-light rounded-circle pl-3 pr-3 mr-3" onclick="helpCall()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                         </svg>
                     </a>
-                    <a href="#" role="button" class="btn btn-outline-light rounded-circle pl-3 pr-3" onclick="helpAuditory()">
+                    <a href="#" role="button" id="helpAuditory" class="btn btn-outline-light rounded-circle pl-3 pr-3" onclick="helpAuditory()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                             <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
                             <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                         </svg>
                     </a>
+                </div>
+
+                <div class="col-md-3 mt-4 small">
+                    <ul class="list-unstyled text-right">
+                        <li id="sum15" class="text-white"><b>15</b> ₴ 1 000 000</li>
+                        <li id="sum14" class="text-warning"><b>14</b> ₴ 500 000</li>
+                        <li id="sum13" class="text-warning"><b>13</b> ₴ 250 000</li>
+                        <li id="sum12" class="text-warning"><b>12</b> ₴ 125 000</li>
+                        <li id="sum11" class="text-warning"><b>11</b> ₴ 64 000</li>
+
+                        <li id="sum10" class="text-white"><b>10</b> ₴ 32 000</li>
+                        <li id="sum9" class="text-warning"><b>9</b> ₴ 16 000</li>
+                        <li id="sum8" class="text-warning"><b>8</b> ₴ 8 000</li>
+                        <li id="sum7" class="text-warning"><b>7</b> ₴ 4 000</li>
+                        <li id="sum6" class="text-warning"><b>6</b> ₴ 2 000</li>
+
+                        <li id="sum5" class="text-white"><b>5</b> ₴ 1 000</li>
+                        <li id="sum4" class="text-warning"><b>4</b> ₴ 500</li>
+                        <li id="sum3" class="text-warning"><b>3</b> ₴ 300</li>
+                        <li id="sum2" class="text-warning"><b>2</b> ₴ 200</li>
+                        <li id="sum1" class="text-warning"><b>1</b> ₴ 100</li>
+                    </ul>
                 </div>
 
             </div>
@@ -64,28 +87,40 @@
 
             <div class="row align-items-center">
                 <div class="col-md-1 mt-4"></div>
-                <div class="col-md-4 rounded-pill border border-white text-white mt-4">
-                    <p class="mt-1"><span class="text-warning"><b>A:</b></span> Вариант ответа</p>
+                <div id="blockA" class="col-md-4 rounded-pill border border-white text-white pt-1 pb-2 mt-4 answer">
+                    <a href="#" role="button" class="stretched-link" onclick="selectAnswer('A')">
+                        <span class="text-warning"><b>A:</b></span>
+                        <span id="answerA"></span>
+                    </a>
                 </div>
                 <div class="col-md-2 text-white mt-4">
                     <div class="border-top border-white d-none d-md-block"></div>
                 </div>
-                <div class="col-md-4 rounded-pill border border-white text-white mt-4">
-                    <p class="mt-1"><span class="text-warning"><b>B:</b></span> Вариант ответа</p>
+                <div id="blockB" class="col-md-4 rounded-pill border border-white text-white pt-1 pb-2 mt-4 answer">
+                    <a href="#" role="button" class="stretched-link" onclick="selectAnswer('B')">
+                        <span class="text-warning"><b>B:</b></span>
+                        <span id="answerB"></span>
+                    </a>
                 </div>
                 <div class="col-md-1 mt-4"></div>
             </div>
 
             <div class="row align-items-center">
                 <div class="col-md-1 mt-4"></div>
-                <div class="col-md-4 rounded-pill border border-white text-white mt-4">
-                    <p class="mt-1"><span class="text-warning"><b>C:</b></span> Вариант ответа</p>
+                <div id="blockC" class="col-md-4 rounded-pill border border-white text-white pt-1 pb-2 mt-4 answer">
+                    <a href="#" role="button" class="stretched-link" onclick="selectAnswer('C')">
+                        <span class="text-warning"><b>C:</b></span>
+                        <span id="answerC"></span>
+                    </a>
                 </div>
-                <div class="col-md-2 text-white mt-4">
+                <div class="col-md-2 text-white">
                     <div class="border-top border-white d-none d-md-block"></div>
                 </div>
-                <div class="col-md-4 rounded-pill border border-white text-white mt-4">
-                    <p class="mt-1"><span class="text-warning"><b>D:</b></span> Вариант ответа</p>
+                <div id="blockD" class="col-md-4 rounded-pill border border-white text-white pt-1 pb-2 mt-4 answer">
+                    <a href="#" role="button" class="stretched-link" onclick="selectAnswer('D')">
+                        <span class="text-warning"><b>D:</b></span>
+                        <span id="answerD"></span>
+                    </a>
                 </div>
                 <div class="col-md-1 mt-4"></div>
             </div>

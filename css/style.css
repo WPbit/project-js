@@ -6,6 +6,32 @@
     background-size: cover;
     height: 100%;
 }
+.bg-darkorange {
+    background-color: darkorange;
+}
+.active-sum {
+    background-color: darkorange;
+    color: #000;
+    padding: 5px;
+}
+
+/* Answer Block */
+.answer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.answer a:hover {
+    color: #000000;
+}
+.answer:hover {
+    background-color: darkorange;
+}
+.answer-selected {
+    background-color: darkorange;
+}
+.badge {
+    font-size: unset;
+}
 
 /*ICONS*/
 .icons-rounded-circle-grey {
